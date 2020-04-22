@@ -44,3 +44,44 @@ TEST(PracticeTest, is_not_a_palindrome)
     bool actual = obj.isPalindrome("whatsthistomfooleryyreloofasdatstahw");
     ASSERT_FALSE(actual);
 }
+
+// Testing sortDescending()
+TEST(PracticeTest, sort_numbers_123){
+    Practice obj;
+    int actual[] = { 1, 2, 3 }; 
+    obj.sortDescending(actual[0], actual[1], actual[2]);
+    // Should be sorted like so:
+    ASSERT_EQ(actual[0], 3);
+    ASSERT_EQ(actual[1], 2);
+    ASSERT_EQ(actual[2], 1);
+}
+
+TEST(PracticeTest, sort_numbers_213){
+    Practice obj;
+    int actual[] = { 2, 1, 3 }; 
+    obj.sortDescending(actual[0], actual[1], actual[2]);
+    // Should be sorted like so:
+    ASSERT_EQ(actual[0], 3);
+    ASSERT_EQ(actual[1], 2);
+    ASSERT_EQ(actual[2], 1);
+}
+
+TEST(PracticeTest, sort_numbers_132){
+    Practice obj;
+    int actual[] = { 1, 3, 2 }; 
+    obj.sortDescending(actual[0], actual[1], actual[2]);
+    // Should be sorted like so:
+    ASSERT_EQ(actual[0], 3);
+    ASSERT_EQ(actual[1], 2);
+    ASSERT_EQ(actual[2], 1);
+}
+
+TEST(PracticeTest, sort_numbers_312){
+    Practice obj;
+    int actual[] = { 3, 1, 2 };
+    obj.sortDescending(actual[0], actual[1], actual[2]);
+    // Should be sorted like so:
+    ASSERT_EQ(actual[0], 3);
+    ASSERT_EQ(actual[1], 2);
+    ASSERT_EQ(actual[2], 1);
+}   
