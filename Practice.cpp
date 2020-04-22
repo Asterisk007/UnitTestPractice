@@ -25,6 +25,25 @@ void Practice::sortDescending(int & first, int & second, int & third)
     first = third;
     third = temp;
   }
+  // Run a second time. That's sure to sort these properly.
+  if( first < second )
+  {
+    int temp = first;
+    first = second;
+    second = temp;
+  }
+  if( second < third )
+  {
+    int temp = second;
+    second = third;
+    third = temp;
+  }
+  if( first < third )
+  {
+    int temp = first;
+    first = third;
+    third = temp;
+  }
 }
 
 // Receive a string and return whether or not it is strictly a palindrome,
