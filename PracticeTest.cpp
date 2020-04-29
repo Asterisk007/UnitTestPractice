@@ -67,7 +67,7 @@ TEST(PracticeTest, sort_numbers_213){
     ASSERT_EQ(actual[2], 1);
 }
 
-TEST(PracticeTest, sort_numbers_213){
+TEST(PracticeTest, sort_numbers_231){
     Practice obj;
     int actual[] = { 2, 3, 1 }; 
     obj.sortDescending(actual[0], actual[1], actual[2]);
@@ -76,7 +76,7 @@ TEST(PracticeTest, sort_numbers_213){
     ASSERT_EQ(actual[2], 1);
 }
 
-TEST(PracticeTest, sort_numbers_213){
+TEST(PracticeTest, sort_numbers_321){
     Practice obj;
     int actual[] = { 3, 2, 1 }; 
     obj.sortDescending(actual[0], actual[1], actual[2]);
