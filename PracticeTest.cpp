@@ -46,6 +46,8 @@ TEST(PracticeTest, is_not_a_palindrome)
 }
 
 // Testing sortDescending()
+// Using all variances of { 1, 2, 3 }
+// Total number of possible orders = 3! => 3 * 2 * 1 = 6 => 6 tests
 TEST(PracticeTest, sort_numbers_123){
     Practice obj;
     int actual[] = { 1, 2, 3 }; 
@@ -60,17 +62,24 @@ TEST(PracticeTest, sort_numbers_213){
     Practice obj;
     int actual[] = { 2, 1, 3 }; 
     obj.sortDescending(actual[0], actual[1], actual[2]);
-    // Should be sorted like so:
     ASSERT_EQ(actual[0], 3);
     ASSERT_EQ(actual[1], 2);
     ASSERT_EQ(actual[2], 1);
 }
 
-TEST(PracticeTest, sort_numbers_132){
+TEST(PracticeTest, sort_numbers_213){
     Practice obj;
-    int actual[] = { 1, 3, 2 }; 
+    int actual[] = { 2, 3, 1 }; 
     obj.sortDescending(actual[0], actual[1], actual[2]);
-    // Should be sorted like so:
+    ASSERT_EQ(actual[0], 3);
+    ASSERT_EQ(actual[1], 2);
+    ASSERT_EQ(actual[2], 1);
+}
+
+TEST(PracticeTest, sort_numbers_213){
+    Practice obj;
+    int actual[] = { 3, 2, 1 }; 
+    obj.sortDescending(actual[0], actual[1], actual[2]);
     ASSERT_EQ(actual[0], 3);
     ASSERT_EQ(actual[1], 2);
     ASSERT_EQ(actual[2], 1);
@@ -80,8 +89,16 @@ TEST(PracticeTest, sort_numbers_312){
     Practice obj;
     int actual[] = { 3, 1, 2 };
     obj.sortDescending(actual[0], actual[1], actual[2]);
-    // Should be sorted like so:
     ASSERT_EQ(actual[0], 3);
     ASSERT_EQ(actual[1], 2);
     ASSERT_EQ(actual[2], 1);
 }   
+
+TEST(PracticeTest, sort_numbers_132){
+    Practice obj;
+    int actual[] = { 1, 3, 2 }; 
+    obj.sortDescending(actual[0], actual[1], actual[2]);
+    ASSERT_EQ(actual[0], 3);
+    ASSERT_EQ(actual[1], 2);
+    ASSERT_EQ(actual[2], 1);
+}
