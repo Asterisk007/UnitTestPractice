@@ -102,3 +102,22 @@ TEST(PracticeTest, sort_numbers_132){
     ASSERT_EQ(actual[1], 2);
     ASSERT_EQ(actual[2], 1);
 }
+
+// Sort where one number is smaller than the others
+TEST (PracticeTest, sort_numbers_122){
+    Practice obj;
+    int actual[] = { 1, 2, 2 };
+    obj.sortDescending(actual[0], actual[1], actual[2]);
+    ASSERT_EQ(actual[0], 2);
+    ASSERT_EQ(actual[1], 2);
+    ASSERT_EQ(actual[2], 1);
+}
+
+TEST (PracticeTest, sort_numbers_212){
+    Practice obj;
+    int actual[] = { 2, 1, 2 };
+    obj.sortDescending(actual[0], actual[1], actual[2]);
+    ASSERT_EQ(actual[0], 2);
+    ASSERT_EQ(actual[1], 2);
+    ASSERT_EQ(actual[2], 1);
+}
